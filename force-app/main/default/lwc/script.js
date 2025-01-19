@@ -33,5 +33,49 @@ scopeTesting();
  console.log(obj["Technilogy job"]);// gives us the Salesforce developer
 
 
- // Spread operator
- 
+ // Spread operator is used to 
+ //1. breaks down an array into individual elements 
+
+ let greetings = "Hi Murali ";
+ let charList = [...greetings];
+ console.log(charList);
+
+ //2. Combining an Array
+ let arr1=["Astro","Sassy"];
+ let arr2=["pod1","Enhancement"];
+ let arr3=[...arr1,...arr2];
+ console.log(arr3);
+ // 3. adding values to array
+ let arr4 = ["Miiki"];
+ let arr5 =["Nikki",...arr4];
+ console.log(arr5);
+ //4. combining an object 
+ let obj1=[
+     {
+         "name": "Murali",
+         "age":29,
+         "job": "Salesforce developer"
+     }];
+
+     let obj2 = [
+         {
+             "name": "Nikki",
+             "age":25,
+             "job": "LIMS Developer"}];
+
+             let obj3=[...obj1,...obj2];
+             console.log(obj3);
+
+// 5. Shallow Copy 
+// if we use traditional way of copying an array i.e .. 
+let arr6 = [1,2,3];
+let arr7 = arr6;
+arr7.push("Mikki");
+console.log(arr6);
+console.log(arr7);
+// both console statements 6,7 have same values but expected is only 7 should have Mikki
+// this is due to shallow copying by JS to avoid this we can use the spread operator
+var arr10 =[...arr6];
+arr10.push("Nikhita");
+console.log('print via spread operator '+ arr10);
+// Shallow copy is not reflected in the arr 6 
