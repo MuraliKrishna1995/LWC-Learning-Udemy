@@ -116,3 +116,15 @@ var str1 = "Hello World";
      var str3 = "   Hello World  ";     
      var str4 = str3.trim();
      console.log("trim method example " +str4);
+
+     // Json operators 
+    let objjson ={
+        Name:"Murali",
+        Age:29,
+        Job:"Salesforce Developer"
+    
+    }
+    // To know what are the parameters we have in the Json we can use object.key() method 
+    console.log('keys in json '+ Object.keys(objjson));
+    // we can also use object.values(objjson) method to get the values of the Json
+    console.log('values in json' + Object.values(objjson));
