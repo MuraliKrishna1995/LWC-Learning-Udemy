@@ -199,4 +199,4 @@ abc();*/
 //Set Timeout
 window.setTimeout(function(){
     console.log('i am in timeout');
-},1000);
+},2000)
