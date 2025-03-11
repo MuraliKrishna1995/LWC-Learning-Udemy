@@ -128,3 +128,41 @@ var str1 = "Hello World";
     console.log('keys in json '+ Object.keys(objjson));
     // we can also use object.values(objjson) method to get the values of the Json
     console.log('values in json' + Object.values(objjson));
+
+    /***Array Methods */
+    //map() method is used to create a new array populated with the results of calling a provided function on every element in the calling array.)
+    //syntax-----> arr.methodName(function(currentItem,index,actualArray)){
+
+    //})
+arr=[2,3,4,6,8,10,12];
+let newArray= arr.map(function(currentItem,index,actualArray){
+    console.log(`current item is ${currentItem} Index is ${index} actuallArray is ${actualArray}`);
+    return currentItem*2;
+})
+console.log('newArray using map function '+newArray);
+//filter() method is used to create a new array filled with all elements of arr that pass the test implemented by the provided function)
+let newfilterArray=arr.filter(function(currentItem,index,actualArray){
+    return currentItem >5
+})
+console.log('newfilterArray using filter function '+newfilterArray);
+//every() method is used to test whether all elements in the array pass the test implemented by the provided function
+
+let age=[20,30,40,50,60];
+let allages=age.every(function(currentItem,index,actualArray){
+    return currentItem >19
+})
+console.log('allages '+allages);
+//some() method is used to test whether some element in the array passes the test implemented by the provided function
+let someages=age.some(function(currentItem,index,actualArray){
+    return currentItem >25
+})
+console.log('someages '+someages);
+//sort() method is used to order the elements of an array in ascending order
+let numberlist=[2,4,5,1,3];
+let sortednumberlist= numberlist.sort(function(a,b){
+    return a-b;// This gives the numberList in ascending order
+})
+console.log(sortednumberlist);
+
+        
+        
