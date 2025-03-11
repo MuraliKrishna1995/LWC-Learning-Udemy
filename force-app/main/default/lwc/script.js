@@ -141,19 +141,19 @@ let newArray= arr.map(function(currentItem,index,actualArray){
 })
 console.log('newArray using map function '+newArray);
 //filter() method is used to create a new array filled with all elements of arr that pass the test implemented by the provided function)
-let newfilterArray=arr.filter(function(currentItem,index,actualArray){
+let newfilterArray=arr.filter(function(currentItem){
     return currentItem >5
 })
 console.log('newfilterArray using filter function '+newfilterArray);
 //every() method is used to test whether all elements in the array pass the test implemented by the provided function
 
 let age=[20,30,40,50,60];
-let allages=age.every(function(currentItem,index,actualArray){
+let allages=age.every(function(currentItem){
     return currentItem >19
 })
 console.log('allages '+allages);
 //some() method is used to test whether some element in the array passes the test implemented by the provided function
-let someages=age.some(function(currentItem,index,actualArray){
+let someages=age.some(function(currentItem){
     return currentItem >25
 })
 console.log('someages '+someages);
@@ -163,6 +163,40 @@ let sortednumberlist= numberlist.sort(function(a,b){
     return a-b;// This gives the numberList in ascending order
 })
 console.log(sortednumberlist);
+//reduce() method is used to apply a function against an accumulator and each value of the array (from left-to-right)   to reduce it to a single value
+let numbers=[1,2,3,4,5];
+console.log(numbers.reduce(function(a,b){
+    return a+b;
+}));
+//forEach() method is used to execute a provided function once for each array element.
+numbers.forEach(function(currentItem){
+    console.log(currentItem);
+})
+/* Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.*/
+//Promise has 3 states pending, resolved and rejected
+// Event Propagation in JS explains the order in which events are fired in the browser 
+// Event Bubbling is the process of firing an event on a child element to parent elements 
+//in lwc we use this more often
+// Event Capturing is the process of firing an event on a parent element to child elements
+        
+        /****** Custom Events in JS*******
+        document.addEventListener('Hello',function(data){
+            console.log(data.detail.message);
+        })
+        function firstFunction(){
+      let event = new CustomEvent ('Hello',{
+          detail:{
+            message:'Hello Murali'
+          }
+        })
+        }
+        document.dispatchEvent(event)*/
 
-        
-        
+// Arrow functions is an alternative syntax for a function expression
+// this is the concept of lexical this
+/*abc= ()=>console.log('iam in arrow function');
+abc();*/
+//Set Timeout
+window.setTimeout(function(){
+    console.log('i am in timeout');
+},1000);
