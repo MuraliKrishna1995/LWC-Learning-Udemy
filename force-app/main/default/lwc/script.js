@@ -1,4 +1,4 @@
-var course ="Murali Krishna Global"
+/*var course ="Murali Krishna Global"
 console.log(course);
 console.log(window);
 function scopeTesting (){
@@ -196,7 +196,7 @@ numbers.forEach(function(currentItem){
 // this is the concept of lexical this
 /*abc= ()=>console.log('iam in arrow function');
 abc();*/
-//Set Timeout
+//Set Timeout*/
 window.setTimeout(function(){
     console.log('i am in timeout');
 },2000)
