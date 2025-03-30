@@ -1,4 +1,4 @@
-/*var course ="Murali Krishna Global"
+var course ="Murali Krishna Global"
 console.log(course);
 console.log(window);
 function scopeTesting (){
@@ -175,28 +175,35 @@ numbers.forEach(function(currentItem){
 /* Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.*/
 //Promise has 3 states pending, resolved and rejected
 // Event Propagation in JS explains the order in which events are fired in the browser 
-// Event Bubbling is the process of firing an event on a child element to parent elements 
+// Event Bubbling is the process of firing an event from child element to parent elements 
 //in lwc we use this more often
-// Event Capturing is the process of firing an event on a parent element to child elements
+// Event Capturing is the process of firing an event from parent element to child elements
         
-        /****** Custom Events in JS*******
+        /****** Custom Events in JS********/
         document.addEventListener('Hello',function(data){
             console.log(data.detail.message);
         })
         function firstFunction(){
-      let event = new CustomEvent ('Hello',{
+      let myevent = new CustomEvent ('Hello',{
           detail:{
             message:'Hello Murali'
           }
         })
+        document.dispatchEvent(myevent)
         }
-        document.dispatchEvent(event)*/
+        
 
 // Arrow functions is an alternative syntax for a function expression
 // this is the concept of lexical this
-/*abc= ()=>console.log('iam in arrow function');
-abc();*/
-//Set Timeout*/
+abc= ()=>console.log('iam in arrow function');
+abc();
+//Set Timeout
 window.setTimeout(function(){
-    console.log('i am in timeout');
+    console.log('timeout')
 },2000)
+
+//setInterval
+let intervalId=window.setInterval(function(){
+console.log("in settime interval")
+},2000)
+clearInterval(intervalId);
